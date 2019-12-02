@@ -1,7 +1,7 @@
 FROM centos:8
 
 RUN yum update -y
-RUN yum install java-1.8.0-openjdk -y
+RUN yum install java-1.8.0-openjdk-devel -y
 
 # common unix/linux utils
 RUN yum install wget zip unzip -y
