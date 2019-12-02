@@ -1,0 +1,12 @@
+FROM centos:8
+
+RUN yum update -y && \
+    yum install wget zip unzip -y
+
+# Packer
+RUN wget https://releases.hashicorp.com/packer/1.4.5/packer_1.4.5_linux_amd64.zip
+RUN unzip packer_1.4.5_linux_amd64.zip
+RUN mv packer /usr/local/bin/
+RUN rm -f packer_1.4.5_linux_amd64.zip
+
+CMD tail -f /dev/null
