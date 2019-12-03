@@ -1,0 +1,11 @@
+FROM centos:8
+
+RUN yum update -y
+
+RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash - && \
+    yum install -y nodejs && \
+    adduser -mr nodejs && \
+    rm -rvf /var/lib/rpm /var/cache/*
+
+
+CMD tail -f /dev/null
