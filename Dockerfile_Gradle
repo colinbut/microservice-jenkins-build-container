@@ -1,0 +1,8 @@
+FROM openjdk:8
+RUN yum update -y && \
+    yum install wget -y
+RUN wget https://services.gradle.org/distributions/gradle-5.0-bin.zip -P /usr/local/bin
+WORKDIR /usr/local/bin
+RUN unzip gradle-5.0-bin.zip
+RUN rm gradle-5.0-bin.zip
+CMD tail -f /dev/null
