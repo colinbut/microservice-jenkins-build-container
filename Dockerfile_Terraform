@@ -1,0 +1,12 @@
+FROM centos:8
+
+RUN yum update -y && \
+    yum install wget zip unzip -y
+
+# Terraform
+RUN wget https://releases.hashicorp.com/terraform/0.12.17/terraform_0.12.17_linux_amd64.zip
+RUN unzip terraform_0.12.17_linux_amd64.zip
+RUN mv terraform /usr/local/bin/
+RUN rm -f terraform_0.12.17_linux_amd64.zip
+
+CMD tail -f /dev/null
