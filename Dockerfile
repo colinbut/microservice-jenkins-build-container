@@ -29,6 +29,7 @@ RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash - && \
     yum install -y nodejs && \
     adduser -mr nodejs && \
     rm -rvf /var/lib/rpm /var/cache/*
-
+    
+RUN yum install git -y
 
 CMD tail -f /dev/null
