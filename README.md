@@ -4,7 +4,7 @@ This repository contains a library of different kinds of custom built 'build con
 
 ## Sypnosis
 
-Rather than using physical or vm 'Agents' in Jenkins directly (as previously commonly done), we can instead spawn off ephemeral 'build containers' to do a _one-off_ build job. 
+Rather than using physical or vm 'Agents' in Jenkins directly (as previously commonly done), we can instead spawn off ephemeral 'build containers' to do a _one-off_ build job. These containers are meant to be 'short-lived' and only exist in the lifespan of the build job (pipeline execution).
 
 Minimal library/dependencies/runtime can be baked into the build container docker image. 
 
