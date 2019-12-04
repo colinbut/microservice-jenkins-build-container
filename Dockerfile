@@ -27,6 +27,14 @@ RUN rm apache-maven-3.6.3-bin.zip
 ENV JAVA_HOME=/usr/lib/jvm/jre-openjdk
 ENV PATH=$PATH:/opt/maven/bin/
 
+# Gradle
+RUN wget https://services.gradle.org/distributions/gradle-5.0-bin.zip -P /opt/
+WORKDIR /opt/
+RUN unzip gradle-5.0-bin.zip
+RUN rm -f gradle-5.0-bin.zip
+RUN mv gradle-5.0 gradle
+ENV PATH=$PATH:/opt/gradle/bin/
+
 # Git
 RUN yum install git -y
 
