@@ -2,6 +2,8 @@
 
 This repository contains a library of different kinds of custom built 'build containers' with specific library/dependencies/runtimes to be used in Jenkins.
 
+![image](JenkinsBuildContainers.png)
+
 ## Sypnosis
 
 Rather than using physical or vm 'Agents' in Jenkins directly (as previously commonly done), we can instead spawn off ephemeral 'build containers' to do a _one-off_ build job. These containers are meant to be 'short-lived' and only exist in the lifespan of the build job (pipeline execution).
