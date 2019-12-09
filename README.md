@@ -38,11 +38,12 @@ pipeline {
 ```
 
 
-## Examples
+## Inventory
 
-- Java
-- Maven
-- Gradle
-- Node/npm
-- Terraform
-- Packer
+| Build Container       | Description                                                                       |
+| --------------------- | --------------------------------------------------------------------------------- |
+| Dockerfile            | 'One size fits all' build containers containing whole host of tools & runtimes    |
+| Dockerfile_Gradle     | with just Gradle                                                                  |
+| Dockerfile_Node       | with the NodeJS runtime                                                           |
+| Dockerfile_Packer     | Packer for building machine images like Amazon AMI                                |
+| Dockerfile_Terraform  | Terraform for provisioning infrastructure on various cloud platforms              |
