@@ -14,6 +14,30 @@ They would be teared down and discarded once the build job finishes.
 
 ![image](JenkinsBuildContainers.png)
 
+## Usage
+
+The custom build containers come supplied as a Docker file for to build a docker image from.
+
+e.g.
+
+```bash
+docker build -t terraform-build -f Dockerfile_Terraform .
+```
+
+The usage of this custom build containers is that once the Docker image is built, we would reference the built Docker image from the Jenkinsfile (of your project) in the agent section.
+
+e.g.
+```groovy
+pipeline {
+  agent {
+    docker {
+      image 'terraform-build:latest'
+    }
+  }
+}
+```
+
+
 ## Examples
 
 - Java
