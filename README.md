@@ -40,10 +40,11 @@ pipeline {
 
 ## Inventory
 
-| Build Container       | Description                                                                       |
-| --------------------- | --------------------------------------------------------------------------------- |
-| Dockerfile            | 'One size fits all' build containers containing whole host of tools & runtimes    |
-| Dockerfile_Gradle     | with just Gradle                                                                  |
-| Dockerfile_Node       | with the NodeJS runtime                                                           |
-| Dockerfile_Packer     | Packer for building machine images like Amazon AMI                                |
-| Dockerfile_Terraform  | Terraform for provisioning infrastructure on various cloud platforms              |
+| Build Container       | Description                                                                               |
+| --------------------- | ----------------------------------------------------------------------------------------- |
+| Dockerfile_Master     | 'One size fits all' build containers containing whole host of tools & runtimes            |
+| Dockerfile_Gradle     | with just Gradle                                                                          |
+| Dockerfile_Node       | with the NodeJS runtime                                                                   |
+| Dockerfile_Packer     | Packer for building machine images like Amazon AMI                                        |
+| Dockerfile_Terraform  | Terraform for provisioning infrastructure on various cloud platforms                      |
+| Dockerfile_Ansible    | Ansible for provisioning infrastructure, deployment automation, configuration management  |
