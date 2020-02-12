@@ -38,7 +38,6 @@ ENV PATH=$PATH:/opt/gradle/bin/
 # Git
 RUN yum install git -y
 
-
 # NodeJS runtime
 RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash - && \
     yum install -y nodejs && \

@@ -1,0 +1,4 @@
+FROM python:3
+RUN pip install ansible --no-cache-dir
+ENV PATH="/root/.local/bin/:${PATH}"
+CMD tail -f /dev/null
